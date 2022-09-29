@@ -1,6 +1,6 @@
 {
   "version": "0.1.0",
-  "name": "movie_review",
+  "name": "anchor_movie_review_program",
   "instructions": [
     {
       "name": "addMovieReview",
@@ -11,12 +11,27 @@
           "isSigner": false
         },
         {
+          "name": "initializer",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
           "name": "movieCommentCounter",
           "isMut": true,
           "isSigner": false
         },
         {
-          "name": "rewardMint",
+          "name": "mint",
           "isMut": true,
           "isSigner": false
         },
@@ -26,27 +41,12 @@
           "isSigner": false
         },
         {
-          "name": "initializer",
-          "isMut": true,
-          "isSigner": true
-        },
-        {
-          "name": "tokenProgram",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
           "name": "associatedTokenProgram",
           "isMut": false,
           "isSigner": false
         },
         {
           "name": "rent",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
-          "name": "systemProgram",
           "isMut": false,
           "isSigner": false
         }
@@ -85,7 +85,7 @@
           "isSigner": false
         },
         {
-          "name": "rewardMint",
+          "name": "mint",
           "isMut": true,
           "isSigner": false
         },
@@ -162,7 +162,7 @@
       ]
     },
     {
-      "name": "close",
+      "name": "deleteMovieReview",
       "accounts": [
         {
           "name": "movieReview",
@@ -170,18 +170,28 @@
           "isSigner": false
         },
         {
-          "name": "reviewer",
+          "name": "initializer",
           "isMut": true,
           "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
         }
       ],
-      "args": []
+      "args": [
+        {
+          "name": "title",
+          "type": "string"
+        }
+      ]
     },
     {
-      "name": "createRewardMint",
+      "name": "initializeTokenMint",
       "accounts": [
         {
-          "name": "rewardMint",
+          "name": "mint",
           "isMut": true,
           "isSigner": false
         },
@@ -191,7 +201,7 @@
           "isSigner": true
         },
         {
-          "name": "systemProgram",
+          "name": "tokenProgram",
           "isMut": false,
           "isSigner": false
         },
@@ -201,35 +211,12 @@
           "isSigner": false
         },
         {
-          "name": "tokenProgram",
-          "isMut": false,
-          "isSigner": false
-        },
-        {
-          "name": "metadata",
-          "isMut": true,
-          "isSigner": false
-        },
-        {
-          "name": "tokenMetadataProgram",
+          "name": "systemProgram",
           "isMut": false,
           "isSigner": false
         }
       ],
-      "args": [
-        {
-          "name": "uri",
-          "type": "string"
-        },
-        {
-          "name": "name",
-          "type": "string"
-        },
-        {
-          "name": "symbol",
-          "type": "string"
-        }
-      ]
+      "args": []
     }
   ],
   "accounts": [
@@ -298,10 +285,10 @@
     {
       "code": 6000,
       "name": "InvalidRating",
-      "msg": "Rating greater than 5 or less than 1"
+      "msg": "Rating must be between 1 and 5"
     }
   ],
   "metadata": {
-    "address": "BouTUP7a3MZLtXqMAm1NrkJSKwAjmid8abqiNjUyBJSr"
+    "address": "FmzAVsBmJWcfkfe7VrvEi7pLA9ALLDWB3NoU2MvLrCZj"
   }
 }
