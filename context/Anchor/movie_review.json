@@ -8,7 +8,21 @@
         {
           "name": "movieReview",
           "isMut": true,
-          "isSigner": false
+          "isSigner": false,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "arg",
+                "type": "string",
+                "path": "title"
+              },
+              {
+                "kind": "account",
+                "type": "publicKey",
+                "path": "initializer"
+              }
+            ]
+          }
         },
         {
           "name": "initializer",
@@ -72,7 +86,23 @@
         {
           "name": "movieComment",
           "isMut": true,
-          "isSigner": false
+          "isSigner": false,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "account",
+                "type": "publicKey",
+                "account": "MovieAccountState",
+                "path": "movie_review"
+              },
+              {
+                "kind": "account",
+                "type": "u64",
+                "account": "MovieCommentCounter",
+                "path": "movie_comment_counter.counter"
+              }
+            ]
+          }
         },
         {
           "name": "movieReview",
@@ -133,7 +163,21 @@
         {
           "name": "movieReview",
           "isMut": true,
-          "isSigner": false
+          "isSigner": false,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "arg",
+                "type": "string",
+                "path": "title"
+              },
+              {
+                "kind": "account",
+                "type": "publicKey",
+                "path": "initializer"
+              }
+            ]
+          }
         },
         {
           "name": "initializer",
@@ -167,7 +211,21 @@
         {
           "name": "movieReview",
           "isMut": true,
-          "isSigner": false
+          "isSigner": false,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "arg",
+                "type": "string",
+                "path": "title"
+              },
+              {
+                "kind": "account",
+                "type": "publicKey",
+                "path": "initializer"
+              }
+            ]
+          }
         },
         {
           "name": "initializer",
@@ -287,8 +345,5 @@
       "name": "InvalidRating",
       "msg": "Rating must be between 1 and 5"
     }
-  ],
-  "metadata": {
-    "address": "FmzAVsBmJWcfkfe7VrvEi7pLA9ALLDWB3NoU2MvLrCZj"
-  }
+  ]
 }

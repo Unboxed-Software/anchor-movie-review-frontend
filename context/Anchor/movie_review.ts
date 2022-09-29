@@ -9,6 +9,20 @@ export type MovieReview = {
           name: "movieReview"
           isMut: true
           isSigner: false
+          pda: {
+            seeds: [
+              {
+                kind: "arg"
+                type: "string"
+                path: "title"
+              },
+              {
+                kind: "account"
+                type: "publicKey"
+                path: "initializer"
+              }
+            ]
+          }
         },
         {
           name: "initializer"
@@ -73,6 +87,22 @@ export type MovieReview = {
           name: "movieComment"
           isMut: true
           isSigner: false
+          pda: {
+            seeds: [
+              {
+                kind: "account"
+                type: "publicKey"
+                account: "MovieAccountState"
+                path: "movie_review"
+              },
+              {
+                kind: "account"
+                type: "u64"
+                account: "MovieCommentCounter"
+                path: "movie_comment_counter.counter"
+              }
+            ]
+          }
         },
         {
           name: "movieReview"
@@ -134,6 +164,20 @@ export type MovieReview = {
           name: "movieReview"
           isMut: true
           isSigner: false
+          pda: {
+            seeds: [
+              {
+                kind: "arg"
+                type: "string"
+                path: "title"
+              },
+              {
+                kind: "account"
+                type: "publicKey"
+                path: "initializer"
+              }
+            ]
+          }
         },
         {
           name: "initializer"
@@ -168,6 +212,20 @@ export type MovieReview = {
           name: "movieReview"
           isMut: true
           isSigner: false
+          pda: {
+            seeds: [
+              {
+                kind: "arg"
+                type: "string"
+                path: "title"
+              },
+              {
+                kind: "account"
+                type: "publicKey"
+                path: "initializer"
+              }
+            ]
+          }
         },
         {
           name: "initializer"
@@ -301,6 +359,20 @@ export const IDL: MovieReview = {
           name: "movieReview",
           isMut: true,
           isSigner: false,
+          pda: {
+            seeds: [
+              {
+                kind: "arg",
+                type: "string",
+                path: "title",
+              },
+              {
+                kind: "account",
+                type: "publicKey",
+                path: "initializer",
+              },
+            ],
+          },
         },
         {
           name: "initializer",
@@ -365,6 +437,22 @@ export const IDL: MovieReview = {
           name: "movieComment",
           isMut: true,
           isSigner: false,
+          pda: {
+            seeds: [
+              {
+                kind: "account",
+                type: "publicKey",
+                account: "MovieAccountState",
+                path: "movie_review",
+              },
+              {
+                kind: "account",
+                type: "u64",
+                account: "MovieCommentCounter",
+                path: "movie_comment_counter.counter",
+              },
+            ],
+          },
         },
         {
           name: "movieReview",
@@ -426,6 +514,20 @@ export const IDL: MovieReview = {
           name: "movieReview",
           isMut: true,
           isSigner: false,
+          pda: {
+            seeds: [
+              {
+                kind: "arg",
+                type: "string",
+                path: "title",
+              },
+              {
+                kind: "account",
+                type: "publicKey",
+                path: "initializer",
+              },
+            ],
+          },
         },
         {
           name: "initializer",
@@ -460,6 +562,20 @@ export const IDL: MovieReview = {
           name: "movieReview",
           isMut: true,
           isSigner: false,
+          pda: {
+            seeds: [
+              {
+                kind: "arg",
+                type: "string",
+                path: "title",
+              },
+              {
+                kind: "account",
+                type: "publicKey",
+                path: "initializer",
+              },
+            ],
+          },
         },
         {
           name: "initializer",
