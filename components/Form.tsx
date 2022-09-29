@@ -14,22 +14,12 @@ import {
   Textarea,
   Switch,
 } from "@chakra-ui/react"
-import * as anchor from "@project-serum/anchor"
-import { getAssociatedTokenAddress } from "@solana/spl-token"
-import { useConnection, useWallet } from "@solana/wallet-adapter-react"
-import { useWorkspace } from "../context/Anchor"
 
 export const Form: FC = () => {
   const [title, setTitle] = useState("")
   const [rating, setRating] = useState(0)
   const [description, setDescription] = useState("")
   const [toggle, setToggle] = useState(true)
-
-  const { connection } = useConnection()
-  const { publicKey, sendTransaction } = useWallet()
-
-  const workspace = useWorkspace()
-  const program = workspace.program
 
   const handleSubmit = async (event: any) => {}
 
