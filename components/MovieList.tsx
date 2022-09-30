@@ -25,8 +25,9 @@ export const MovieList: FC = () => {
 
   const fetchMyReviews = async () => {}
 
+  const fetchAccounts = async () => {}
+
   useEffect(() => {
-    const fetchAccounts = async () => {}
     fetchAccounts()
   }, [])
 
