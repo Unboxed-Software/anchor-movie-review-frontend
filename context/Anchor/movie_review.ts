@@ -43,11 +43,35 @@ export type MovieReview = {
           name: "movieCommentCounter"
           isMut: true
           isSigner: false
+          pda: {
+            seeds: [
+              {
+                kind: "const"
+                type: "string"
+                value: "counter"
+              },
+              {
+                kind: "account"
+                type: "publicKey"
+                account: "MovieAccountState"
+                path: "movie_review"
+              }
+            ]
+          }
         },
         {
           name: "mint"
           isMut: true
           isSigner: false
+          pda: {
+            seeds: [
+              {
+                kind: "const"
+                type: "string"
+                value: "mint"
+              }
+            ]
+          }
         },
         {
           name: "tokenAccount"
@@ -113,11 +137,35 @@ export type MovieReview = {
           name: "movieCommentCounter"
           isMut: true
           isSigner: false
+          pda: {
+            seeds: [
+              {
+                kind: "const"
+                type: "string"
+                value: "counter"
+              },
+              {
+                kind: "account"
+                type: "publicKey"
+                account: "MovieAccountState"
+                path: "movie_review"
+              }
+            ]
+          }
         },
         {
           name: "mint"
           isMut: true
           isSigner: false
+          pda: {
+            seeds: [
+              {
+                kind: "const"
+                type: "string"
+                value: "mint"
+              }
+            ]
+          }
         },
         {
           name: "tokenAccount"
@@ -252,6 +300,15 @@ export type MovieReview = {
           name: "mint"
           isMut: true
           isSigner: false
+          pda: {
+            seeds: [
+              {
+                kind: "const"
+                type: "string"
+                value: "mint"
+              }
+            ]
+          }
         },
         {
           name: "user"
@@ -393,11 +450,35 @@ export const IDL: MovieReview = {
           name: "movieCommentCounter",
           isMut: true,
           isSigner: false,
+          pda: {
+            seeds: [
+              {
+                kind: "const",
+                type: "string",
+                value: "counter",
+              },
+              {
+                kind: "account",
+                type: "publicKey",
+                account: "MovieAccountState",
+                path: "movie_review",
+              },
+            ],
+          },
         },
         {
           name: "mint",
           isMut: true,
           isSigner: false,
+          pda: {
+            seeds: [
+              {
+                kind: "const",
+                type: "string",
+                value: "mint",
+              },
+            ],
+          },
         },
         {
           name: "tokenAccount",
@@ -463,11 +544,35 @@ export const IDL: MovieReview = {
           name: "movieCommentCounter",
           isMut: true,
           isSigner: false,
+          pda: {
+            seeds: [
+              {
+                kind: "const",
+                type: "string",
+                value: "counter",
+              },
+              {
+                kind: "account",
+                type: "publicKey",
+                account: "MovieAccountState",
+                path: "movie_review",
+              },
+            ],
+          },
         },
         {
           name: "mint",
           isMut: true,
           isSigner: false,
+          pda: {
+            seeds: [
+              {
+                kind: "const",
+                type: "string",
+                value: "mint",
+              },
+            ],
+          },
         },
         {
           name: "tokenAccount",
@@ -602,6 +707,15 @@ export const IDL: MovieReview = {
           name: "mint",
           isMut: true,
           isSigner: false,
+          pda: {
+            seeds: [
+              {
+                kind: "const",
+                type: "string",
+                value: "mint",
+              },
+            ],
+          },
         },
         {
           name: "user",
